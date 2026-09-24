@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adv. Tejpal Singh | Criminal & Cyber Law Expert</title>
+  <meta name="description" content="Adv. Tejpal Singh - Expert in Criminal and Cyber Law. 2000+ Cyber Cases handled. Practice at all District Courts of Delhi. Call 9212604051" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #0f2c59;
+      --primary-light: #1a3a6b;
+      --accent: #c9a227;
+      --accent-hover: #d4b03a;
+      --text: #1a1a1a;
+      --text-light: #555;
+      --bg: #ffffff;
+      --bg-light: #f7f9fc;
+      --bg-dark: #0a1f3d;
+      --white: #ffffff;
+      --shadow: 0 10px 40px rgba(15, 44, 89, 0.08);
+      --radius: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ========== NAVBAR ========== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(15, 44, 89, 0.08);
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      background: var(--primary);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .logo-text span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text);
+      transition: color 0.2s;
+      position: relative;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--primary);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.3s;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      background: var(--primary);
+      color: white !important;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .nav-cta:hover {
+      background: var(--primary-light);
+      transform: translateY(-1px);
+    }
+
+    .nav-cta::after {
+      display: none !important;
+    }
+
+    .nav-email-btn {
+      background: var(--accent);
+      color: var(--primary) !important;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .nav-email-btn:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+    }
+
+    .nav-email-btn::after {
+      display: none !important;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .hamburger span {
+      width: 24px;
+      height: 2.5px;
+      background: var(--primary);
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      padding: 140px 0 100px;
+      background: linear-gradient(135deg, #0a1f3d 0%, #0f2c59 50%, #1a3a6b 100%);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(201, 162, 39, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(201, 162, 39, 0.2);
+      border: 1px solid rgba(201, 162, 39, 0.4);
+      color: var(--accent);
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero-tagline {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 32px;
+      max-width: 480px;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.25s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--primary);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(201, 162, 39, 0.35);
+    }
+
+    .btn-gmail {
+      background: rgba(255, 255, 255, 0.12);
+      color: white;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-gmail:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: white;
+      transform: translateY(-2px);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius);
+      padding: 24px;
+      text-align: center;
+      backdrop-filter: blur(8px);
+    }
+
+    .stat-number {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--accent);
+      font-family: 'Playfair Display', serif;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.75);
+      margin-top: 4px;
+    }
+
+    /* ========== ABOUT ========== */
+    .section {
+      padding: 90px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-label {
+      display: inline-block;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: 36px;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .section-desc {
+      color: var(--text-light);
+      max-width: 560px;
+      margin: 0 auto;
+      font-size: 16px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-content h3 {
+      font-size: 28px;
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+
+    .about-content p {
+      color: var(--text-light);
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
+
+    .about-list {
+      list-style: none;
+      margin-top: 24px;
+    }
+
+    .about-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+      font-size: 15px;
+    }
+
+    .about-list li svg {
+      flex-shrink: 0;
+      margin-top: 3px;
+      color: var(--accent);
+    }
+
+    .about-image-wrapper {
+      width: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 3px solid var(--accent);
+    }
+
+    .about-image-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* ========== SERVICES ========== */
+    .services {
+      background: var(--bg-light);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid transparent;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(15, 44, 89, 0.12);
+      border-color: rgba(201, 162, 39, 0.3);
+    }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .service-card h3 {
+      font-size: 20px;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      color: var(--text-light);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* ========== WHY US ========== */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .why-card {
+      text-align: center;
+      padding: 32px 20px;
+      background: white;
+      border-radius: var(--radius);
+      border: 1px solid #e8eef5;
+      transition: all 0.3s;
+    }
+
+    .why-card:hover {
+      border-color: var(--accent);
+      box-shadow: var(--shadow);
+    }
+
+    .why-icon {
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
+
+    .why-card h4 {
+      font-size: 17px;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .why-card p {
+      font-size: 14px;
+      color: var(--text-light);
+    }
+
+    /* ========== CONTACT ========== */
+    .contact {
+      background: linear-gradient(135deg, #0a1f3d 0%, #0f2c59 100%);
+      color: white;
+    }
+
+    .contact .section-title {
+      color: white;
+    }
+
+    .contact .section-desc {
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(201, 162, 39, 0.2);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .contact-item h4 {
+      font-size: 16px;
+      margin-bottom: 4px;
+      color: var(--accent);
+    }
+
+    .contact-item p,
+    .contact-item a {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .contact-item a:hover {
+      color: var(--accent);
+    }
+
+    .contact-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .contact-card h3 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .contact-card p {
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 28px;
+    }
+
+    .phone-big {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+
+    .btn-call {
+      background: var(--accent);
+      color: var(--primary);
+      width: 100%;
+      justify-content: center;
+      font-size: 16px;
+      padding: 16px;
+    }
+
+    .btn-call:hover {
+      background: var(--accent-hover);
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+      background: #071528;
+      color: rgba(255, 255, 255, 0.7);
+      padding: 40px 0 24px;
+      text-align: center;
+    }
+
+    footer .logo-text {
+      color: white;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+
+    footer p {
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 992px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-tagline {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .hero-btns {
+        justify-content: center;
+      }
+      .hero-stats {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .services-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        gap: 16px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      }
+      .nav-links.open {
+        display: flex;
+      }
+      .hamburger {
+        display: flex;
+      }
+      .hero h1 {
+        font-size: 34px;
+      }
+      .section-title {
+        font-size: 28px;
+      }
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo">
+        <div class="logo-icon">TS</div>
+        <div class="logo-text">Adv. Tejpal <span>Singh</span></div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="mailto:ph.tejpal@gmail.com" class="nav-email-btn">✉️ Gmail Us</a></li>
+        <li><a href="tel:9212604051" class="nav-cta">Call Now</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <div>
+          <div class="hero-badge">⚖ Criminal & Cyber Law Expert</div>
+          <h1>Adv. Tejpal <span>Singh</span></h1>
+          <p class="hero-tagline">
+            Trusted advocate specializing in Criminal Law and Cyber Crime cases. 
+            Successfully handled <strong>2000+ Cyber Cases</strong> with practice across all District Courts of Delhi.
+          </p>
+          <div class="hero-btns">
+            <a href="tel:9212604051" class="btn btn-primary">
+              📞 Call Now: 9212604051
+            </a>
+            <a href="mailto:ph.tejpal@gmail.com" class="btn btn-gmail">
+              ✉️ Email Us
+            </a>
+          </div>
+        </div>
+        <div class="hero-stats" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="stat-card">
+            <div class="stat-number">2000+</div>
+            <div class="stat-label">Cyber Cases Handled</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">All</div>
+            <div class="stat-label">Delhi District Courts</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Client Focused</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">About Advocate</div>
+        <h2 class="section-title">Experienced Legal Professional</h2>
+        <p class="section-desc">Dedicated to protecting your rights with expertise in criminal and cyber law.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-content">
+          <h3>Fighting for Justice in Criminal & Cyber Matters</h3>
+          <p>
+            Adv. Tejpal Singh is a highly experienced advocate specializing in <strong>Criminal Law</strong> and <strong>Cyber Crime</strong> cases. 
+            With a proven track record of handling over <strong>2000 cyber cases</strong>, he has built a reputation for delivering effective legal solutions.
+          </p>
+          <p>
+            He practices at <strong>all District Courts of Delhi</strong> and is committed to providing dedicated representation to clients facing complex legal challenges in the digital age as well as traditional criminal matters.
+          </p>
+          <ul class="about-list">
+            <li>
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Expert in Cyber Crime, Online Fraud & Digital Evidence
+            </li>
+            <li>
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Strong Criminal Defense & Prosecution Experience
+            </li>
+            <li>
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Practice across All District Courts of Delhi
+            </li>
+            <li>
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Client-centric approach with clear communication
+            </li>
+          </ul>
+        </div>
+        <div class="about-image-wrapper">
+         <img src="photo.jpeg" alt="Adv. Tejpal Singh" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Practice Areas</div>
+        <h2 class="section-title">Areas of Expertise</h2>
+        <p class="section-desc">Specialized legal services focused on Criminal and Cyber Law matters.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">💻</div>
+          <h3>Cyber Crime Cases</h3>
+          <p>
+            Expert handling of online fraud, hacking, phishing, data theft, social media crimes, 
+            cyber bullying, and all matters under the IT Act. Over 2000 cyber cases handled successfully.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⚖️</div>
+          <h3>Criminal Defense</h3>
+          <p>
+            Strong representation in criminal cases including bail applications, trial defense, 
+            anticipatory bail, and all stages of criminal proceedings in District Courts.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔍</div>
+          <h3>Digital Evidence & Investigation</h3>
+          <p>
+            Assistance with digital forensics related matters, electronic evidence presentation, 
+            and legal strategy for technology-related offences.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📜</div>
+          <h3>Bail & Anticipatory Bail</h3>
+          <p>
+            Prompt and effective filing of regular and anticipatory bail applications 
+            in District Courts with focused arguments for favorable outcomes.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🛡️</div>
+          <h3>Online Fraud & Scam Cases</h3>
+          <p>
+            Specialized support for victims of UPI fraud, banking fraud, investment scams, 
+            and other financial cyber crimes — both for complainants and accused.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏛️</div>
+          <h3>Delhi District Courts Practice</h3>
+          <p>
+            Regular practice across all District Courts of Delhi ensuring accessible and efficient 
+            legal representation for clients from various jurisdictions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Why Choose Us</div>
+        <h2 class="section-title">Why Clients Trust Adv. Tejpal Singh</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">🏆</div>
+          <h4>2000+ Cyber Cases</h4>
+          <p>Extensive experience in cyber crime litigation</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">📍</div>
+          <h4>All District Courts of Delhi</h4>
+          <p>Practice spanning all Delhi jurisdictions</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">⚡</div>
+          <h4>Quick Response</h4>
+          <p>Prompt attention to urgent legal matters</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">Contact Adv. Tejpal Singh</h2>
+        <p class="section-desc">Need legal help for a criminal or cyber case? Reach out for consultation.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <h4>Phone / WhatsApp</h4>
+              <a href="tel:9212604051">+91 92126 04051</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:ph.tejpal@gmail.com">ph.tejpal@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">⚖️</div>
+            <div>
+              <h4>Specialization</h4>
+              <p>Criminal Law & Cyber Crime Cases</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🏛️</div>
+            <div>
+              <h4>Chamber Address</h4>
+              <p>Chamber No. 397, Western Wing<br>Tis Hazari Court, Delhi</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Practice Location</h4>
+              <p>All District Courts of Delhi</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🕒</div>
+            <div>
+              <h4>Availability</h4>
+              <p>Available for urgent consultations</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-card">
+          <h3>Need Immediate Help?</h3>
+          <p>Call, WhatsApp or Email directly for quick legal advice on criminal or cyber matters.</p>
+          <a href="tel:9212604051" class="phone-big">+91 92126 04051</a>
+          <a href="tel:9212604051" class="btn btn-call">📞 Call Now</a>
+          <div style="display: flex; gap: 10px; margin-top: 12px;">
+            <a href="https://wa.me/919212604051" target="_blank" class="btn btn-outline" style="flex:1; justify-content:center; border-color:rgba(255,255,255,0.4);">
+              💬 WhatsApp
+            </a>
+            <a href="mailto:ph.tejpal@gmail.com" class="btn btn-outline" style="flex:1; justify-content:center; border-color:rgba(255,255,255,0.4);">
+              ✉️ Gmail Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="logo-text">Adv. Tejpal <span style="color:var(--accent)">Singh</span></div>
+      <p>Criminal & Cyber Law Expert | 2000+ Cyber Cases | Chamber No. 397, Tis Hazari Court, Delhi</p>
+      <p style="margin-top:16px; font-size:13px; opacity:0.6;">
+        © 2026 Adv. Tejpal Singh. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // Close menu on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+      });
+    });
+  </script>
+</body>
+</html>
+```[cite: 1]
